@@ -38,4 +38,4 @@ jobs:
           name: output-log-file
       - shell: bash
         run: |
-         	ls output*
+          ls output-log-file
