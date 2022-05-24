@@ -1,4 +1,4 @@
-name: dispatch workflow
+name: amit dispatch workflow
 on:
   workflow_dispatch
 jobs:
@@ -7,3 +7,17 @@ jobs:
     steps:
       - name: msg
         run: echo "Invoked by call_workflow"
+
+name: call workflow
+on:
+  # Manual trigger from the UI
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'call from ui'
+
+  # Dependency to a forking workflow
+  workflow_run:
+    workflows: ["amit dispatch workflow"]
+    type:
+      - complete
