@@ -13,7 +13,3 @@ on:
     inputs:
       message:
         description: 'call from ui'
-
-on:workflow_run:workflows: ["Run Tests"]
-    branches: [main]
-    types:- completed- requested
