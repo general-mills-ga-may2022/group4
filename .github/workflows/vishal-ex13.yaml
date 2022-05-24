@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: setvar
         run: echo '::set-output name=SOMEVAR::Hello All'
-        
+jobs:   
   use_variable:
 	runs-on: ubuntu-latest
 	needs: initialize_variable
