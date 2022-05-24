@@ -7,3 +7,13 @@ jobs:
     steps:
       - name: msg
         run: echo "Invoked by call_workflow"
+on:
+  # Manual trigger from the UI
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'call from ui'
+
+on:workflow_run:workflows: ["Run Tests"]
+    branches: [main]
+    types:- completed- requested
