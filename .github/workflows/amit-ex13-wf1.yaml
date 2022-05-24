@@ -10,6 +10,6 @@ jobs:
   use_variable:
 	runs-on: ubuntu-latest
 	needs: initialize_variable
-	steps:
-		- name: usevar
-		  run: echo "var is ${{ env.SOMEVAR }}"
+    steps:
+      - name: usevar
+        run: echo "var is ${{ env.SOMEVAR }}"
