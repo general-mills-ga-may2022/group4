@@ -15,3 +15,27 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+  upload-job:
+    runs-on: ubuntu-latest
+    name: vamsi - Save output
+    steps:
+      - shell: bash
+        run: |
+          expr 1 + 1 > output.log
+      - name: Upload output file
+        uses: actions/upload-artifact@v3
+        with:
+          name: output-log-file
+          path: output.log
+  download-job:
+    runs-on: ubuntu-latest
+    name: vamsi - download output
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: output-log-file
+      - shell: bash
+        run: |
+         	ls output*
