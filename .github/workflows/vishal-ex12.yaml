@@ -1,4 +1,4 @@
-name: dispatch workflow
+name: dispatch workflow - ex12
 on:
   workflow_dispatch
 jobs:
@@ -10,11 +10,11 @@ jobs:
 
   # Dependency to a forking workflow
   workflow_run:
-    workflows: ["dispatch workflow"]
+    workflows: ["dispatch workflow - ex12"]
     type:
       - complete
 jobs:
-  say_hi2:
+  say_hello:
     runs-on: ubuntu-latest
     steps:
       - name: msg
