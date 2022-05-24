@@ -31,3 +31,15 @@ jobs:
         with:
           name: output-log-file
           path: output.log
+
+  example2-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: output-log-file
+      - shell: bash
+        run: |
+         	cat output-log-file
+
