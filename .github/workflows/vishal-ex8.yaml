@@ -41,5 +41,4 @@ jobs:
           name: output-log-file
       - shell: bash
         run: |
-         	cat output-log-file
-
+         	ls output-log-file
