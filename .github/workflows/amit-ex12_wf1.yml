@@ -1,3 +1,12 @@
+name: dispatch workflow
+on:
+  workflow_dispatch
+jobs:
+  say_hi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: msg
+        run: echo "Invoked by call_workflow"
 
 
 name: call workflow
@@ -9,14 +18,8 @@ on:
         description: 'call from ui'
 
   # Dependency to a forking workflow
-workflow_run:
-  workflows: ["dispatch workflow"]
-  type:
-    - complete
-
-jobs:
-  say_hi:
-    runs-on: ubuntu-latest
-    steps:
-      - name: msg
-        run: echo "Invoked by call_workflow"
+  workflow_run:
+    workflows: ["dispatch workflow"]
+    type:
+      - complete
+      
