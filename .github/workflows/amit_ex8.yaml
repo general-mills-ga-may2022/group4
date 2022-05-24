@@ -53,9 +53,7 @@ jobs:
         with:
           name: output-log-file
       - shell: bash
-        run: |
-         	ls output.log
-
+        run: ls output.log
   example2-job:
     steps:
       - name: Download a single artifact
