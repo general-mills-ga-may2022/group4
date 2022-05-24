@@ -14,9 +14,9 @@ jobs:
     type:
       - complete
 
-# jobs:
-#   say_hello:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: msg
-#         run: echo "manual triger"
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: msg
+        run: echo "manual triger"
