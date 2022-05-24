@@ -6,9 +6,6 @@ on:
 jobs:
   initialize_variable:
     runs-on: ubuntu-latest
-    steps:
-      - name: setvar
-        run: echo "SOMEVAR=hello" > $GITHUB_ENV7
   use_variable:
     runs-on: ubuntu-latest
     needs: initialize_variable
