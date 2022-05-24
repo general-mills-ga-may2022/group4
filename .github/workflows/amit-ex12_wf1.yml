@@ -1,12 +1,12 @@
-name: amit dispatch workflow
-on:
-  workflow_dispatch
-jobs:
-  say_hi:
-    runs-on: ubuntu-latest
-    steps:
-      - name: msg
-        run: echo "Invoked by call_workflow"
+# name: amit dispatch workflow
+# on:
+#   workflow_dispatch
+# jobs:
+#   say_hi:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: msg
+#         run: echo "Invoked by call_workflow"
 
 name: call workflow
 on:
