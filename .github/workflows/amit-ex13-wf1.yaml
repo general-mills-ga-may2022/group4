@@ -8,8 +8,8 @@ jobs:
       - name: setvar
         run: echo "SOMEVAR=hello" > $GITHUB_ENV
   use_variable:
-	runs-on: ubuntu-latest
-	needs: initialize_variable
+    runs-on: ubuntu-latest
+    needs: initialize_variable
     steps:
       - name: usevar
         run: echo "var is ${{ env.SOMEVAR }}"
