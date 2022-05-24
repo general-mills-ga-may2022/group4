@@ -8,15 +8,6 @@ jobs:
       - name: msg
         run: echo "Invoked by call_workflow"
 
-
-name: call workflow
-on:
-  # Manual trigger from the UI
-  workflow_dispatch:
-    inputs:
-      message:
-        description: 'call from ui'
-
   # Dependency to a forking workflow
   workflow_run:
     workflows: ["dispatch workflow"]
