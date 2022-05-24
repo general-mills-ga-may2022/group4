@@ -12,6 +12,9 @@ name: call workflow
 on:
   # Manual trigger from the UI
   workflow_dispatch:
+  jobs:
+    say_hi_amit:
+    runs-on: ubuntu-latest
     inputs:
       message:
         description: 'call from ui'
