@@ -1,0 +1,22 @@
+name: vishal dispatch workflow
+on:
+  workflow_dispatch
+jobs:
+  say_hi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: msg
+        run: echo "Invoked by call_workflow"
+
+  # Dependency to a forking workflow
+  workflow_run:
+    workflows: ["vishal dispatch workflow"]
+    type:
+      - complete
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: msg
+        run: echo "manual triger"

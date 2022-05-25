@@ -1,0 +1,17 @@
+name: test variables workflow
+on:
+  workflow_dispatch
+
+jobs:
+  initialize_variable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setvar
+        run: echo '::set-output name=SOMEVAR::Hello All'
+
+jobs:   
+  use_variable:
+	needs: initialize_variable
+	steps:
+		- name: usevar
+		  run: echo "var is ${{ steps.setvar.outputs.SOMEVAR }}"
