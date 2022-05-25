@@ -2,7 +2,7 @@ name: Node.js CI
 
 on:
   workflow_dispatch:
-    branches: [ vishal ]
+    branches: [ main ]
 
 jobs:
   build:
